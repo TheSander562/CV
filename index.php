@@ -1,20 +1,11 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
-    <meta name="author" content="Sander Lambrechts">
-    <meta name="description" content="Sanders CV Website">
-    <meta name="keywords" content="Sander, CV">
-    <title>Sander Lambrechts | Mijn CV</title>
-    <link href='http://fonts.googleapis.com/css?family=Raleway:500' rel='stylesheet' type='text/css'>
-    <link href='http://fonts.googleapis.com/css?family=Muli' rel='stylesheet' type='text/css'>
-    <link href="http://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
-    <link href="http://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet">
-	<link href="http://cdnjs.cloudflare.com/ajax/libs/materialize/0.100.2/css/materialize.css" rel="stylesheet">
-    <link href="http://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta/css/bootstrap.min.css" rel="stylesheet">
-    <link href="assets/css/start.css" id="switch_style" rel="stylesheet">
+	<?php
+		include 'include/head.php';
+		$pagina = "home";
+	?>
+	<link href="/assets/css/start.css" id="switch_style" rel="stylesheet">
 </head>
 <body>
 
@@ -34,8 +25,8 @@
 
 <header>
 	<video playsinline autoplay muted loop id="bgvid">
-		<source src="assets/vids/timelapse.mp4" type="video/mp4">
-		<source src="assets/vids/timelapse.webm" type="video/webm">
+		<source src="/assets/vids/timelapse.mp4" type="video/mp4">
+		<source src="/assets/vids/timelapse.webm" type="video/webm">
 	</video>
 </header>
 
@@ -45,7 +36,7 @@
             <div class="col-md-12 col-sm-12 col-xs-12">
                 <div id="v-card" class="card">
 					<div id="profile" class="right">
-                        <img alt="profile-image" class="img-responsive" src="assets/img/logo/logo.png">
+                        <img alt="profile-image" class="img-responsive" src="/assets/img/logo/logo.png">
                         <div class="slant"></div>
                     </div>
                     <div class="card-content">
@@ -83,7 +74,7 @@
                             <a href="https://twitter.com/TheDeamonGamer" class="social  btn-floating blue"><i class="fa fa-twitter"></i></a>
                             <a href="https://plus.google.com/117297347970066318725" class="social  btn-floating red"><i class="fa fa-google-plus"></i></a>
                             <a href="https://www.linkedin.com/in/sander-lambrechts-238308151/" class="social  btn-floating blue darken-3"><i class="fa fa-linkedin"></i></a>
-                            <a href="http://www.nu.nl/rss/Internet" class="social  btn-floating orange darken-3"><i class="fa fa-rss"></i></a>
+                            <a href="https://www.nu.nl/rss/Internet" class="social  btn-floating orange darken-3"><i class="fa fa-rss"></i></a>
                         </div>
                     </div>
                 </div>
@@ -114,63 +105,16 @@
     </div>
 </div>
 
-<section id="menu" class="section">
-    <div class="container">
-        <div id="interest-card" class="card">
-			<div class="section-title">
-				<h4 class="text-uppercase text-center"><img src="assets/img/icons/layers.png" alt="demo">Menu</h4>
-			</div>
-            <div class="card-content">
-                <p>
-                    Wat wil je nog meer weten over mij?
-                </p>
-            </div>
-            <div class="row no-gutters">
-                <div class="col-md-2 col-sm-4 col-xs-6  box text-center">
-                    <div class="interest-icon">
-                        <i class="fa fa-music"></i>
-                        <span>Muziek</span>
-                    </div>
-                </div>
-                <div class="col-md-2 col-sm-4 col-xs-6 box text-center">
-                    <div class="interest-icon-even">
-                        <i class="fa fa-gamepad"></i>
-                        <span>Gaming</span>
-                    </div>
-                </div>
-                <div class="col-md-2 col-sm-4 col-xs-6 box text-center">
-                    <div class="interest-icon">
-                        <i class="fa fa-camera"></i>
-                        <span>Fotografie</span>
-                    </div>
-                </div>
-                <div class="col-md-2 col-sm-4 col-xs-6 box text-center">
-                    <div class="interest-icon-even">
-                        <img src="assets/img/icons/judo.png" width="50px" height="50px" style="margin-top: 10px;">
-                        <span>Judo</span>
-                    </div>
-                </div>
-                <div class="col-md-2 col-sm-4 col-xs-6 box text-center">
-                    <div class="interest-icon">
-                        <i class="fa fa-train"></i>
-                        <span>Reizen</span>
-                    </div>
-                </div>
-                <div class="col-md-2 col-sm-4 col-xs-6 box text-center">
-                    <div class="interest-icon-even">
-                        <i class="fa fa-wpexplorer"></i>
-                        <span>Ruimte</span>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </div>
-</section>
+<div class="container">
+	<?php
+		include 'include/nav.php';
+	?>
+</div>
 
 <section id="interest" class="section">
     <div class="container">
         <div class="section-title">
-            <h4 class="text-uppercase text-center"><img src="assets/img/icons/heart.png" alt="demo">Interesses</h4>
+            <h4 class="text-uppercase text-center"><img src="/assets/img/icons/heart.png" alt="demo">Interesses</h4>
         </div>
         <div id="interest-card" class="card">
             <div class="card-content">
@@ -200,7 +144,7 @@
                 </div>
                 <div class="col-md-2 col-sm-4 col-xs-6 box text-center">
                     <div class="interest-icon-even">
-                        <img src="assets/img/icons/judo.png" width="50px" height="50px" style="margin-top: 10px;">
+                        <img src="/assets/img/icons/judo.png" width="50px" height="50px" style="margin-top: 10px;">
                         <span>Judo</span>
                     </div>
                 </div>
@@ -222,18 +166,13 @@
 </section>
 
 <footer>
-    <div class="container">
-		<p class="text-center">
-<?php
-		echo "Copyright &copy; 2001-" . date("Y") . " Sander Lambrechts CV. Alle rechten voorbehouden door <strong>Sander Lambrechts</strong>";
-?>
-		</p>
-    </div>
+	<?php
+		include 'include/footer.php';
+	?>
 </footer>
-<script src="https://code.jquery.com/jquery-3.2.1.min.js"></script>
-<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.11.0/umd/popper.min.js"></script>
-<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta/js/bootstrap.min.js"></script>
-<script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.100.2/js/materialize.min.js"></script>
-<script src="assets/js/start.js"></script>
+<?php
+	include 'include/scripts.php';
+?>
+<script src="/assets/js/start.js"></script>
 </body>
 </html>

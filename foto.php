@@ -1,48 +1,10 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-    <meta name="author" content="Trimatrix Lab">
-    <meta name="description" content="">
-    <meta name="keywords" content="">
-
-
-    <title>Single Portfolio</title>
-    <link rel="icon" href="images/site/fav-icon.png">
-
-    <!--APPLE TOUCH ICON-->
-    <link rel="apple-touch-icon" href="images/site/apple-touch-icon.png">
-
-
-    <!-- GOOGLE FONT -->
-    <link href='https://fonts.googleapis.com/css?family=Raleway:500' rel='stylesheet' type='text/css'>
-    <link href='https://fonts.googleapis.com/css?family=Muli' rel='stylesheet' type='text/css'>
-
-
-    <!-- MATERIAL ICON FONT -->
-    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
-    <!-- FONT AWESOME -->
-    <link href="stylesheets/vendors/font-awesome.min.css" rel="stylesheet">
-
-
-    <!-- ANIMATION -->
-    <link href="stylesheets/vendors/animate.min.css" rel="stylesheet">
-
-    <!-- SWIPER -->
-    <link href="stylesheets/vendors/swiper.min.css" rel="stylesheet">
-
-
-    <!-- MATERIALIZE -->
-    <link href="stylesheets/vendors/materialize.css" rel="stylesheet">
-    <!-- BOOTSTRAP -->
-    <link href="stylesheets/vendors/bootstrap.min.css" rel="stylesheet">
-
-    <!-- CUSTOM STYLE -->
-    <link href="stylesheets/style.css" id="switch_style" rel="stylesheet">
-
-
+	<?php
+		include 'include/head.php';
+		$pagina = "foto";
+	?>
 </head>
 <body>
 
@@ -165,31 +127,14 @@
     </div>
 </section>
 
-<!--==========================================
-                 SCROLL TO TOP
-===========================================-->
 <div id="scroll-top">
     <div id="scrollup"><i class="fa fa-angle-up"></i></div>
 </div>
-
-<!--==========================================
-                 FOOTER
-===========================================-->
-<footer class="single-footer">
-    <div class="container">
-        <!--FOOTER DETAILS-->
-        <p class="text-center">
-            © Material CV. All right reserved by
-            <a href="http://trimatrixlab.com/" target="_blank">
-                <strong>Trimatrixlab</strong>
-            </a>
-        </p>
-    </div>
+<footer>
+	<?php
+		include 'include/footer.php';
+	?>
 </footer>
-
-<!--==========================================
-                    SCRIPTS
-===========================================-->
 <script src="javascript/vendors/jquery-2.1.3.min.js"></script>
 <script src="javascript/vendors/bootstrap.min.js"></script>
 <script src="javascript/vendors/materialize.min.js"></script>
@@ -197,6 +142,8 @@
 <script src="javascript/vendors/scrollreveal.min.js"></script>
 <script src="javascript/vendors/swiper.jquery.min.js"></script>
 <script src="javascript/single-page.js"></script>
-
+<?php
+	include 'include/scripts.php';
+?>
 </body>
 </html>

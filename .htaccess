@@ -1,0 +1,17 @@
+RewriteEngine On
+RewriteRule ^404/?$ /errors/404.php [L]
+RewriteCond %{REQUEST_FILENAME} !-f
+RewriteRule ^([^/]+)/$ $1.php
+RewriteRule ^([^/]+)/([^/]+)/$ /$1/$2.php
+RewriteCond %{REQUEST_FILENAME} !-f
+RewriteCond %{REQUEST_FILENAME} !-d
+RewriteCond %{REQUEST_URI} !(\.[a-zA-Z0-9]{1,5}|/)$
+RewriteRule (.*)$ /$1/ [R=301,L]
+RewriteCond %{REQUEST_FILENAME} !-f
+RewriteCond %{REQUEST_FILENAME} !-d
+RewriteCond %{REQUEST_FILENAME} !-l
+RewriteRule ^ /404/ [L,R]
+
+RewriteCond %{HTTPS} off
+RewriteCond www.%{HTTP_HOST} ^(?:www\.)?(www\..+)$ [NC]
+RewriteRule ^ https://%1%{REQUEST_URI} [NE,L,R]
